@@ -1,0 +1,25 @@
+[
+    {
+      "name": "ActivitySourceGenerator"
+    },
+    {
+      "name": "ImplicitIntentSourceGenerator"
+    },
+    {
+      "name": "CodeExecutionSinkGenerator"
+    },
+    {
+      "name":"AndroidIntentLaunchSinkGenerator"
+    },
+    {
+      "name":"OpenInputStreamSinkGenerator"
+    },
+    {
+      "name":"ActivityResultSourceGenerator"
+    }
+    ,
+    {
+      "name":"Intent"
+    }
+]
+  

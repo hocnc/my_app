@@ -1,0 +1,22 @@
+{
+    "model_generators": [
+      {
+        "find": "methods",
+        "where": [
+          {
+            "constraint": "name",
+            "pattern": "onActivityResult"
+          }
+        ],
+        "model": {
+          "sources": [
+            {
+              "kind": "ActivityResult",
+              "port": "Argument(3)"
+            }
+          ]
+        },"verbosity" : 1
+      }
+    ]
+  }
+  

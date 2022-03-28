@@ -1,0 +1,34 @@
+{
+    "model_generators": [
+        {
+            "find": "methods",
+            "where": [
+              {
+                "constraint": "parent",
+                "inner": {
+                  "constraint": "name",
+                  "pattern": "Landroid/content/ContentResolver;"
+                }
+              },
+              {
+                "constraint": "any_of",
+                "inners": [
+                  {
+                    "constraint": "name",
+                    "pattern": "openInputStream"
+                  }
+                ]
+              }
+            ],
+            "model": {
+                "sinks": [
+                  {
+                    "kind": "OpenInputStream",
+                    "port": "Argument(1)"
+                  }
+                ]
+            },"verbosity": 1
+          }
+    ]
+  }
+  

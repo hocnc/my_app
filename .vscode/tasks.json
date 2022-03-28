@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Mariana-Trench",
+            "type": "shell",
+            "command": "mariana-trench",
+            "args": [
+                "--system-jar-configuration-path=android-10/android.jar",
+                "--apk-path=sample-app-debug.apk",
+                "--source-root-directory=android/app/src/main/java",
+                "--model-generator-configuration-paths=mt-rules/model-generators"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+              }
+        },
+        {
+            "label": "Go Build",
+            "type": "shell",
+            "command": "go",
+            "args": [
+                "build",
+                "${file}"
+            ]
+        }
+        ,
+        {
+            "label": "Go Build A Smaller Binary",
+            "type": "shell",
+            "command": "go build -ldflags \"-w -s\" ${file}"
+        }
+    ]
+}

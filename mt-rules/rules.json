@@ -1,0 +1,39 @@
+[
+  {
+    "name": "User input flows into code execution sink (RCE)",
+    "code": 1,
+    "description": "Values from user-controlled source may eventually flow into code execution sink",
+    "sources": [
+      "ActivityUserInput"
+    ],
+    "sinks": [
+      "CodeExecution"
+    ]
+  },
+   {
+      "name": "Theft of arbitrary files",
+      "code": 2,
+      "description": "Values from user-controlled source may eventually flow into an openInputStream",
+      "sources": 
+         [
+          "ActivityResult"
+        ]
+      ,
+      "sinks": [
+        "OpenInputStream"
+      ]
+    },
+    {
+      "name": "Using an implicit to send a broadcast",
+      "code": 3,
+      "description": "Values from user-controlled source may eventually flow into an sendBroadcast",
+      "sources": 
+         [
+          "IntentCreation"
+        ]
+      ,
+      "sinks": [
+        "LaunchingComponent"
+      ]
+    }
+]
